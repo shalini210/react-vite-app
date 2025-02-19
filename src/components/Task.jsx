@@ -15,13 +15,29 @@ export default function Task() {
         taskref.current.value=""
         showtask()
     }
+    let updateTask=(t)=>
+    {
+                let i = taskarray.findIndex((task)=>(task.taskname==t))
+        if(i <0)
+        {
+            return
+        }
+        
+        taskarray[i].taskstatus="Complete"
+        showtask()
+    }
     let showtask=()=>
     {
     let temparry = taskarray.map((t)=>{
-        return <tr>
+        let colorname = "orange"
+        if(t.taskstatus=="Complete")
+        {
+colorname="yellowgreen"
+        }
+        return <tr style={{backgroundColor:colorname}}>
             <td>{t.taskname}</td>
             <td>{t.taskstatus}</td>
-            <td><input type="button" value="Complete"></input></td>
+            <td><input type="button" value="Complete" onClick={()=>updateTask(t.taskname)}></input></td>
             <td><input type="button" value="Delete" onClick={()=>deletetask(t.taskname)}></input></td>
             </tr>
             
