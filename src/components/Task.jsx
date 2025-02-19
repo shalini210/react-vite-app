@@ -21,8 +21,7 @@ export default function Task() {
         if(i <0)
         {
             return
-        }
-        
+        }        
         taskarray[i].taskstatus="Complete"
         showtask()
     }
