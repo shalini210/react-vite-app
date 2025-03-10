@@ -1,5 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHouseUser } from '@fortawesome/free-solid-svg-icons'
+import { faUser } from '@fortawesome/free-regular-svg-icons'
 
 export default function Navbar() {
     // /  /about   /projects
@@ -26,7 +29,10 @@ export default function Navbar() {
         md:mt-0 md:border-0  dark:bg-gray-800
          bg-blue-800 text-white dark:border-gray-700">
         <li>
-        <Link to="/" class="block py-2 px-3  rounded-sm hover:bg-gray-100  md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</Link>          
+        <Link to="/" class="block py-2 px-3  rounded-sm hover:bg-gray-100  md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+        
+        <FontAwesomeIcon icon={faHouseUser}></FontAwesomeIcon>
+        Home</Link>          
         </li>
         
         <li>
@@ -38,7 +44,16 @@ export default function Navbar() {
           
         </li>
         <li>
-        <Link to="/contact" class="block py-2 px-3  rounded-sm hover:bg-gray-100  md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"> Contact </Link>
+        <Link to="/contact" class="block py-2 px-3  rounded-sm hover:bg-gray-100  md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+          <FontAwesomeIcon icon={faUser}></FontAwesomeIcon>
+           Contact </Link>
+      
+        </li>
+        
+        <li>
+        <Link to="/forstate" class="block py-2 px-3  rounded-sm hover:bg-gray-100  md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
+          <FontAwesomeIcon icon={faUser}></FontAwesomeIcon>
+          forstate </Link>
       
         </li>
       </ul>

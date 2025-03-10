@@ -1,21 +1,34 @@
 import React, { useState } from 'react'
 
 export default function Valueswithstate() {
-    // a,b,msg  set a on a textbox
-    // set b on a textbox 
-    // set msg on button click and show sum of a and b in msg
-    const [n,setn] =useState(0)
-    const [name,setname]=useState("")
-    const [cname,setcname]=useState("yellow")
+  // let count =0;
+const [table,settable] =useState(0)
+
+  const [count,setcount] = useState(0)
+  let increment = ()=>
+  {
+    let i = count;
+    i++;
+    setcount(i)
+    console.log(count)
+  }
+  let decrement = ()=>
+  {
+    let i = count;
+    i--;
+    setcount(i)
+    console.log(count)
+  }
   return (
-    <div style={{backgroundColor:cname,height:"100dvh"}}>
-        <div><input type="color" onChange={(e)=>setcname(e.target.value)}/> </div>
-        <div>Enter naem : <input type="text" onBlur={(e)=>setname(e.target.value)} /></div>
-        <div>WElcome {name}</div>
-    <div>Enter any no : 
-        <input type="text" onChange={(e)=>setn(parseInt(e.target.value))}/>
-    </div>
-    <div className='text-2xl'>square of {n } is {n*n}</div>
+    <div className='flex'>
+      <p>Enter any no :  <input type="text" /></p>
+      <input type="button" value="show table" />
+      <div>
+        {table}
+      </div>
+      {/* <input type="button" value="-" onClick={()=>decrement()} />
+    {count}
+    <input type="button" value="+" onClick={()=>increment()}/> */}
     </div>
   )
 }

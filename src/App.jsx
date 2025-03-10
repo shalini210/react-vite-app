@@ -10,11 +10,32 @@ import UsingReference from './components/UsingReference'
 import Valueswithstate from './components/Valueswithstate'
 import Task from './components/Task'
 import ItemManager from './components/ItemManager'
+import {Routes,Route} from "react-router-dom"
+import {Link} from "react-router"
+import Home from './components/Home'
+import About from './components/About'
+import Projects from './components/Projects'
+import Navbar from './components/Navbar'
+import "flowbite"
+import Particle from './components/Particle'
+import Stateeg1 from './components/stateeg1'
 function App() {
    return (
     <>
     <div className='px-4'>
-    <ItemManager></ItemManager>
+      <Navbar></Navbar>
+     
+
+      <Routes>
+        
+        <Route path='/' element={<Home></Home>}></Route>
+        <Route path="/about" element={<About></About>}></Route>
+        <Route path='/projects' element={<Projects></Projects>}></Route>
+        <Route path='/forstate' element={<Stateeg1></Stateeg1>}></Route>
+        
+      </Routes>
+      
+    {/* <ItemManager></ItemManager> */}
     {/* <Task></Task> */}
     {/* <Valueswithstate></Valueswithstate> */}
     {/* <Calculate></Calculate> */}
