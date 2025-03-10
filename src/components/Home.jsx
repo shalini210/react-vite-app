@@ -1,5 +1,5 @@
 import React from 'react'
-import TypewriterComponent from 'typewriter-effect'
+// import TypewriterComponent from 'typewriter-effect'
 import StarField from "react-starfield"
 import homemain from "../assets/images/home-main.svg"
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
         Hello There, <br></br><span className='text-fuchsia-400'> I am John Capner</span></h1>
       <br></br>
       <h1 className=" text-5xl font-semibold text-fuchsia-400" >
-         <TypewriterComponent 
+         {/* <TypewriterComponent 
          options=
          {
           {strings:["Software Developer","Mern Stack ","Web Designer "]
@@ -30,7 +30,7 @@ export default function Home() {
         deleteSpeed: 50,}
         }>
 
-        </TypewriterComponent>
+        </TypewriterComponent> */}
         </h1>
         </div>
         <div>
