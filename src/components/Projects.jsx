@@ -14,7 +14,7 @@ export default function Projects() {
 
   return (
     <>
-    <div className='flex justify-center bg-black text-white align-middle items-center gap-6'>
+    <div className='flex h-[100dvh] justify-center bg-black text-white align-middle items-center gap-6'>
       {projectsUI}
       </div>
     </>
