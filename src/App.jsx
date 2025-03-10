@@ -18,7 +18,7 @@ import Projects from './components/Projects'
 import Navbar from './components/Navbar'
 import "flowbite"
 import Particle from './components/Particle'
-import Stateeg1 from './components/stateeg1'
+import Stateeg1 from './components/Stateeg1'
 function App() {
    return (
     <>
