@@ -19,6 +19,11 @@ import Navbar from './components/Navbar'
 import "flowbite"
 import Particle from './components/Particle'
 import Stateeg1 from './components/Stateeg1'
+import Homewithlogin from './components/Homewithlogin'
+import Logout from './components/Logout'
+import Login from './components/Login'
+import Exampleofuseeffect from './components/Exampleofuseeffect'
+import Products from './components/Products'
 function App() {
    return (
     <>
@@ -28,6 +33,11 @@ function App() {
 
       <Routes>
         
+        <Route path='/products' element={<Products></Products>}></Route>
+        <Route path='/useEffecteg' element={<Exampleofuseeffect></Exampleofuseeffect>}></Route>
+        <Route path='/homewithlogin' element={<Homewithlogin></Homewithlogin>}></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/logout' element={<Logout></Logout>}></Route>
         <Route path='/' element={<Home></Home>}></Route>
         <Route path="/about" element={<About></About>}></Route>
         <Route path='/projects' element={<Projects></Projects>}></Route>
