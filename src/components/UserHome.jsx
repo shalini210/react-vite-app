@@ -5,12 +5,14 @@ import Products from './Products';
 export default function UserHome(props) {
     // userLogin={userlogin} setuserlogin={setuserlogin}
 let userLogin = props.userLogin;
-let setuserLogin = props.setUserLogin
+
+console.log(props)
+let d = {userLogin:userLogin}
 //   props.setuserlogin(true)
   return (
     <div><nav>
         {/* <Products userLogi={userLogin}></Products> */}
-        <li><Link to="/Products" > Products</Link></li>
+        <li><Link to= "/products" state={d} > Products </Link></li>
         <li>Cart</li>
         <li>your orders</li>
         <li>profile</li>
