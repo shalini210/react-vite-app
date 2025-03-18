@@ -1,16 +1,19 @@
 import React, { useEffect } from 'react'
-
+import { useNavigate } from 'react-router'
+import { useLocation } from 'react-router'
 export default function Products(props) {
-    let userlogin ="sdf"
-    useEffect(()=>
+    const navigate = useNavigate()
+    const location = useLocation()
+      useEffect(()=>
     {
-        if(userlogin)
-        {
-            console.log("contionye on this page")
+        if(location.state!=null)
+        {                       
+            console.log("contionye on this page")           
         }
         else
         {
             console.log("sent back to lgoin")
+            navigate("/homewithlogin")
         }
     },[])
     var prdts = [{id:1,name:"nikia 1600",company:"Nokia",price:"1250"},
