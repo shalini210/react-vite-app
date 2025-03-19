@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router'
 import { useLocation } from 'react-router'
+import prdts from './productsdata'
+import { Link } from 'react-router'
 export default function Products(props) {
     const navigate = useNavigate()
     const location = useLocation()
@@ -16,13 +18,14 @@ export default function Products(props) {
             navigate("/homewithlogin")
         }
     },[])
-    var prdts = [{id:1,name:"nikia 1600",company:"Nokia",price:"1250"},
-    {id:1,name:"realme 9",company:"Redmi",price:"12500"},
-    {id:1,name:"Galaxy 45",company:"Google",price:"5000"},
-    {id:1,name:"iphone 50",company:"Apple",price:"200050"}]
+   
     var prdtsui = prdts.map((p)=>
     {
-        return <div className='w-32 h-32 border-2 border-amber-300 bg-yellow-100'> {p.name}<br></br> {p.company}<br></br>{p.price}</div>
+        return <div className='w-32 h-32 border-2 border-amber-300
+         bg-yellow-100'>
+            <img src={p.img} class="w-full aspect-square" alt="" />
+             {p.name}<br></br> {p.company}<br></br>{p.price}
+         <Link to={`/productdetails/${p.id}`}>View more </Link></div>
     })
   return (
     <div>Products:
